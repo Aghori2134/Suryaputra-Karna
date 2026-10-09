@@ -1,0 +1,580 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewprt" content="width=device-width, initial-scale=1.0">
+  <title>Surya Putra Karna | The Unsung Warrior</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #070b0d;
+      color: #f5e5ce;
+      font-family: "Playfair Display", serif;
+      overflow-x: hidden;
+    }
+
+    .cinzel {
+      font-family: "Cinzel", serif;
+    }
+
+    .gold {
+      color: #eab46b;
+    }
+
+    .gold-border {
+      border-color: #b98649;
+    }
+
+    .hero {
+      background-image:
+        linear-gradient(90deg, rgba(4, 8, 10, .94), rgba(4, 8, 10, .35) 55%, rgba(4, 8, 10, .03)),
+        linear-gradient(0deg, #070b0d, transparent 22%),
+        url("images/hero.png");
+      background-position: center;
+      background-size: cover;
+    }
+
+    .legend-image {
+      background-image:
+        linear-gradient(90deg, #070b0d 0%, transparent 45%),
+        url("images/karna.jfif");
+      background-position: center;
+      background-size: cover;
+    }
+
+    .journey-image {
+      background-image:
+        linear-gradient(0deg, rgba(5, 7, 8, .35), rgba(5, 7, 8, .05)),
+        url("images/hero2.jfif");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .quote-image {
+      background-image:
+        linear-gradient(90deg, rgba(5, 7, 8, .15), #070b0d 95%),
+        url("images/karna2.jpg");
+      background-position: center;
+      background-size: cover;
+    }
+
+    .dropdown {
+      display: none;
+    }
+
+    .nav-item:hover .dropdown {
+      display: block;
+    }
+
+    .nav-item:hover > a {
+      color: #efbd77;
+    }
+
+    .gold-button {
+      transition: all .3s ease;
+    }
+
+    .gold-button:hover {
+      background: #eab46b;
+      color: #090c0e;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(234, 180, 107, .15);
+    }
+
+    .value-card {
+      transition: transform .35s ease, border-color .35s ease,
+        background .35s ease;
+    }
+
+    .value-card:hover {
+      transform: translateY(-9px);
+      border-color: #b98649;
+      background: #171713;
+    }
+
+    .gallery-image {
+      transition: transform .6s ease, filter .4s ease;
+    }
+
+    .gallery-card {
+      overflow: hidden;
+    }
+
+    .gallery-card:hover .gallery-image {
+      transform: scale(1.09);
+      filter: brightness(1.15);
+    }
+
+    .timeline-point {
+      box-shadow: 0 0 0 5px rgba(234, 180, 107, .1);
+    }
+
+    .section-line {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #9b6b38, transparent);
+    }
+	.text{
+			animation:appear 1s linear;
+		}
+		@keyframes appear{
+			from{
+				opacity:0;
+				transform:translateX(-40px);
+				filter:blur(5px);
+			}
+			to{
+				opacity: 1;
+				transform: translateX(0);
+				filter: blur(0);
+			}
+		}
+		.card{
+				animation:card linear;
+				animation-timeline:view();
+				animation-range:0% 40%;
+		}
+		@keyframes card{
+			from {
+				opacity: 0;
+				filter: blur(6px);
+				transform:translateY(-60px);
+			}
+		
+			to {
+				opacity: 1;
+				filter: blur(0);
+				transform:translateY(0);
+			}
+		}
+		.card2{
+				animation:card2 linear;
+				animation-timeline:view();
+				animation-range:0% 40%;
+		}
+		@keyframes card2{
+			from {
+				opacity: 0;
+				filter: blur(6px);
+				transform:translateY(60px);
+			}
+		
+			to {
+				opacity: 1;
+				filter: blur(0);
+				transform:translateY(0);
+			}
+		}
+  </style>
+</head>
+
+<body>
+  <header class="absolute z-50 top-0 left-0 w-full px-5 md:px-10 py-5">
+    <nav class="max-w-[1500px] mx-auto flex items-center justify-between gap-6">
+
+      <a href="#home" class="flex items-center gap-3 shrink-0">
+         <img src="https://upload.wikimedia.org/wikipedia/en/e/eb/Suryaputra_Karn.png?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original" class="w-16 rounded-[100%]">
+      </a>
+
+      <div class="hidden md:flex items-center gap-7 text-xs tracking-wide">
+
+        <a href="#home" class="nav-item relative py-3 hover:text-amber-300">Home</a>
+
+        <div class="nav-item relative py-3">
+          <a href="#legend" class="flex items-center gap-2">
+            About <i class="ri-arrow-down-s-line"></i>
+          </a>
+          <div class="dropdown absolute top-full left-0 w-48 rounded-md border border-white/10 bg-[#101313]/95 backdrop-blur-xl p-2 shadow-2xl">
+            <a href="#legend" class="block px-3 py-2 hover:bg-amber-500/10 hover:text-amber-300">Who Was Karna</a>
+            <a href="#values" class="block px-3 py-2 hover:bg-amber-500/10 hover:text-amber-300">His Qualities</a>
+            <a href="#gallery" class="block px-3 py-2 hover:bg-amber-500/10 hover:text-amber-300">Legacy</a>
+            <a href="#journey" class="block px-3 py-2 hover:bg-amber-500/10 hover:text-amber-300">Why He Matters</a>
+          </div>
+        </div>
+
+        <div class="nav-item relative py-3">
+          <a href="#journey" class="flex items-center gap-2">
+            Life <i class="ri-arrow-down-s-line"></i>
+          </a>
+          <div class="dropdown absolute top-full left-0 w-44 rounded-md border border-white/10 bg-[#101313]/95 p-2 shadow-2xl">
+            <a href="#journey" class="block px-3 py-2 hover:bg-amber-500/10 hover:text-amber-300">Early Life</a>
+            <a href="#journey" class="block px-3 py-2 hover:bg-amber-500/10 hover:text-amber-300">Friendship</a>
+            <a href="#values" class="block px-3 py-2 hover:bg-amber-500/10 hover:text-amber-300">Warrior</a>
+            <a href="#gallery" class="block px-3 py-2 hover:bg-amber-500/10 hover:text-amber-300">The End</a>
+          </div>
+        </div>
+
+        <div class="nav-item relative py-3">
+          <a href="#gallery" class="flex items-center gap-2">
+            Gallery <i class="ri-arrow-down-s-line"></i>
+          </a>
+          <div class="dropdown absolute top-full left-0 w-44 rounded-md border border-white/10 bg-[#101313]/95 p-2 shadow-2xl">
+            <a href="#gallery" class="block px-3 py-2 hover:bg-amber-500/10 hover:text-amber-300">Warrior Portraits</a>
+            <a href="#gallery" class="block px-3 py-2 hover:bg-amber-500/10 hover:text-amber-300">The Battlefield</a>
+            <a href="#gallery" class="block px-3 py-2 hover:bg-amber-500/10 hover:text-amber-300">Divine Armour</a>
+          </div>
+        </div>
+
+        <div class="nav-item relative py-3">
+          <a href="#quotes" class="flex items-center gap-2">
+            Quotes <i class="ri-arrow-down-s-line"></i>
+          </a>
+          <div class="dropdown absolute top-full left-0 w-44 rounded-md border border-white/10 bg-[#101313]/95 p-2 shadow-2xl">
+            <a href="#quotes" class="block px-3 py-2 hover:bg-amber-500/10 hover:text-amber-300">Wisdom</a>
+            <a href="#quotes" class="block px-3 py-2 hover:bg-amber-500/10 hover:text-amber-300">Courage</a>
+          </div>
+        </div>
+
+        <div class="nav-item relative py-3">
+          <a href="#footer" class="flex items-center gap-2">
+            More <i class="ri-arrow-down-s-line"></i>
+          </a>
+          <div class="dropdown absolute top-full right-0 w-44 rounded-md border border-white/10 bg-[#101313]/95 p-2 shadow-2xl">
+            <a href="#values" class="block px-3 py-2 hover:bg-amber-500/10 hover:text-amber-300">His Values</a>
+            <a href="#footer" class="block px-3 py-2 hover:bg-amber-500/10 hover:text-amber-300">About This Story</a>
+          </div>
+        </div>
+      </div>
+
+      <a href="#journey" class="gold-button shrink-0 rounded-full border gold-border px-4 md:px-5 py-2 text-[10px] md:text-xs">
+        The Real Hero <i class="ri-arrow-right-line ml-2"></i>
+      </a>
+
+    </nav>
+  </header>
+  <section id="home" class="hero min-h-[650px] md:min-h-[760px] flex items-center relative">
+    <div class="absolute left-5 md:left-10 top-1/3 hidden md:flex flex-col items-center gap-4">
+      <div class="h-24 w-px bg-amber-500/60"></div>
+      <i class="ri-sun-line gold text-xl"></i>
+      <div class="h-28 w-px bg-amber-500/60"></div>
+    </div>
+
+    <div class="max-w-[1500px] mx-auto w-full px-7 md:px-20 pt-20">
+      <div class="max-w-2xl text">
+
+        <p class="cinzel text-xs md:text-sm tracking-[.3em] gold mb-5">
+          THE UNSUNG WARRIOR
+        </p>
+
+        <h2 class="cinzel text-xl md:text-3xl font-semibold text-[#f7e8d5]">
+          SURYAPUTRA
+        </h2>
+
+        <h1 class="cinzel text-6xl sm:text-7xl md:text-9xl leading-none font-bold gold mt-1">
+          KARNA
+        </h1>
+
+        <p class="mt-6 max-w-sm text-sm md:text-base leading-7 text-stone-200">
+          Not born of a kingdom, but of the Sun,
+          yet his light was never the same as the world's.
+        </p>
+
+        <a href="#journey" class="gold-button inline-flex items-center mt-8 rounded-full border gold-border px-6 py-3 text-xs">
+          Explore His Journey <i class="ri-arrow-right-line ml-3"></i>
+        </a>
+
+        <div class="mt-10 flex items-center gap-3 text-xs text-stone-400">
+          <i class="ri-mouse-line text-xl gold"></i>
+          Scroll to discover his legend
+        </div>
+
+      </div>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full section-line"></div>
+  </section>
+  <section id="legend" class="bg-[#080c0e]">
+    <div class="grid grid-cols-1 lg:grid-cols-12 min-h-[360px]">
+
+      <div class="lg:col-span-4 flex flex-col justify-center px-7 md:px-14 py-12 order-2 lg:order-1 card">
+        <p class="cinzel gold text-xs tracking-[.25em] mb-3">THE LEGEND</p>
+
+        <h2 class="text-3xl md:text-4xl mb-5">Who Was Karna?</h2>
+
+        <p class="text-sm leading-7 text-stone-300">
+          Karna, the son of Surya and Kunti, was a warrior,
+          a giver, a friend and a man of unmatched courage.
+          Born with divine armour, he lived his life fighting
+          for recognition, respect and a place in the world.
+        </p>
+
+        <a href="#journey" class="gold-button mt-6 inline-flex items-center justify-center rounded-full border gold-border px-5 py-3 text-xs w-fit">
+          Read More <i class="ri-arrow-right-line ml-3"></i>
+        </a>
+      </div>
+
+      <div class="legend-image min-h-[330px] lg:col-span-5 order-1 lg:order-2"></div>
+
+      <div class="lg:col-span-3 flex flex-col justify-center gap-6 px-7 md:px-10 py-10 order-3 border-t lg:border-t-0 lg:border-l border-white/10">
+
+        <div class="flex items-start gap-4 card">
+          <i class="ri-sun-line text-3xl gold"></i>
+          <div>
+            <h3 class="gold text-sm mb-1">Born in Mystery</h3>
+            <p class="text-xs leading-5 text-stone-400">A child of the Sun, raised by a charioteer.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 card">
+          <i class="ri-focus-3-line text-3xl gold"></i>
+          <div>
+            <h3 class="gold text-sm mb-1">The Greatest Archer</h3>
+            <p class="text-xs leading-5 text-stone-400">A legendary archer whose skill earned respect.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 card">
+          <i class="ri-heart-3-line text-3xl gold"></i>
+          <div>
+            <h3 class="gold text-sm mb-1">A True Friend</h3>
+            <p class="text-xs leading-5 text-stone-400">He stood beside Duryodhana until the end.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 card">
+          <i class="ri-hand-heart-line text-3xl gold"></i>
+          <div>
+            <h3 class="gold text-sm mb-1">A Generous Soul</h3>
+            <p class="text-xs leading-5 text-stone-400">He never refused anyone who asked for help.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <section id="journey" class="relative overflow-hidden bg-[#0b0d0e] card2">
+
+    <div class="grid grid-cols-1 lg:grid-cols-12">
+
+      <div class="journey-image min-h-[300px] lg:col-span-4"></div>
+
+      <div class="lg:col-span-8 px-6 md:px-12 py-12 lg:py-14">
+
+        <div class="flex flex-col md:flex-row justify-between gap-8">
+          <div>
+            <p class="cinzel gold text-xs tracking-[.2em] mb-3">LIFE JOURNEY</p>
+            <h2 class="text-3xl leading-tight">
+              From a Charioteer's Son<br>
+              to a Legendary Warrior
+            </h2>
+          </div>
+
+          <blockquote id="quotes" class="max-w-xs text-sm italic text-stone-300 leading-7 md:pt-6">
+            "I may be the son of a charioteer,
+            but I am a warrior by choice,
+            not by birth."
+            <span class="block text-right gold text-xs mt-2">— Karna</span>
+          </blockquote>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8 relative">
+
+          <div class="hidden xl:block absolute top-[7px] left-0 w-full h-px bg-amber-800/60"></div>
+
+          <div class="relative">
+            <div class="timeline-point relative z-10 w-3 h-3 rounded-full bg-[#eab46b] border-2 border-[#332719] mb-5"></div>
+            <h3 class="gold text-sm mb-2">Birth</h3>
+            <p class="text-xs text-stone-400 leading-6">Born to Kunti and Surya, but raised by Adhiratha and Radha.</p>
+          </div>
+
+          <div class="relative">
+            <div class="timeline-point relative z-10 w-3 h-3 rounded-full bg-[#eab46b] border-2 border-[#332719] mb-5"></div>
+            <h3 class="gold text-sm mb-2">Growing Up</h3>
+            <p class="text-xs text-stone-400 leading-6">He pursued mastery in archery despite the barriers before him.</p>
+          </div>
+
+          <div class="relative">
+            <div class="timeline-point relative z-10 w-3 h-3 rounded-full bg-[#eab46b] border-2 border-[#332719] mb-5"></div>
+            <h3 class="gold text-sm mb-2">Friendship</h3>
+            <p class="text-xs text-stone-400 leading-6">His bond with Duryodhana changed the course of his life.</p>
+          </div>
+
+          <div class="relative">
+            <div class="timeline-point relative z-10 w-3 h-3 rounded-full bg-[#eab46b] border-2 border-[#332719] mb-5"></div>
+            <h3 class="gold text-sm mb-2">Kurukshetra</h3>
+            <p class="text-xs text-stone-400 leading-6">He fought a defining battle with courage and determination.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="quote-image min-h-[230px] md:min-h-[270px] flex items-center justify-end px-7 md:px-20 border-y border-white/10 card2">
+    <div class="max-w-md text-right py-12">
+      <i class="ri-double-quotes-l gold text-3xl"></i>
+      <p class="text-xl md:text-2xl italic leading-relaxed">
+        "The greatest battle<br>
+        is not fought with weapons,<br>
+        but with self-respect."
+      </p>
+      <p class="gold text-xs mt-4">— Karna</p>
+    </div>
+  </section>
+  <section id="values" class="py-16 md:py-20 px-6 md:px-12 bg-[#090d0f]">
+
+    <div class="max-w-[1350px] mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-7">
+
+      <div class="flex flex-col justify-center card">
+        <p class="cinzel gold text-xs tracking-[.2em] mb-3">HIS PHILOSOPHY</p>
+        <h2 class="text-3xl font-semibold mb-4">His Values</h2>
+
+        <p class="text-sm leading-6 text-stone-400">
+          Karna's life teaches us that true greatness
+          is not about where you are born,
+          but about what you stand for.
+        </p>
+
+        <a href="#gallery" class="gold-button mt-6 inline-flex items-center justify-center rounded-full border gold-border px-5 py-3 text-xs w-fit">
+          Learn More <i class="ri-arrow-right-line ml-3"></i>
+        </a>
+      </div>
+
+      <div class="value-card rounded-2xl border border-white/5 bg-[#101314] p-7 text-center card2">
+        <i class="ri-heart-3-line text-4xl gold"></i>
+        <h3 class="mt-5 mb-3">Generosity</h3>
+        <p class="text-xs text-stone-400 leading-5">He gave, even when he had little.</p>
+      </div>
+
+      <div class="value-card rounded-2xl border border-white/5 bg-[#101314] p-7 text-center card2">
+        <i class="ri-sun-line text-4xl gold"></i>
+        <h3 class="mt-5 mb-3">Loyalty</h3>
+        <p class="text-xs text-stone-400 leading-5">He remained loyal to his word.</p>
+      </div>
+
+      <div class="value-card rounded-2xl border border-white/5 bg-[#101314] p-7 text-center card2">
+        <i class="ri-sword-line text-4xl gold"></i>
+        <h3 class="mt-5 mb-3">Courage</h3>
+        <p class="text-xs text-stone-400 leading-5">He faced destiny without fear.</p>
+      </div>
+
+      <div class="value-card rounded-2xl border border-white/5 bg-[#101314] p-7 text-center card2">
+        <i class="ri-sun-fill text-4xl gold"></i>
+        <h3 class="mt-5 mb-3">Self-Respect</h3>
+        <p class="text-xs text-stone-400 leading-5">He always stood by his principles.</p>
+      </div>
+
+    </div>
+  </section>
+<section class="bg-[#080c0e] px-6 py-12 text-center border-y border-amber-500/20">
+
+  <p class="text-xs tracking-[.3em] text-amber-400 mb-3 card">
+    THE WARRIOR'S THEME
+  </p>
+
+  <h2 class="text-3xl md:text-4xl text-amber-100 mb-4 card">
+    The Sound of Karna
+  </h2>
+
+  <p class="text-sm text-stone-400 mb-8 card">
+    Feel the power of the legendary warrior through music.
+  </p>
+
+  <audio controls class="w-full max-w-xl mx-auto card2">
+    <source src="audio/audio1.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+</section>
+  <section id="gallery" class="py-14 px-6 md:px-12 border-t border-white/10 bg-[#070a0c]">
+
+    <div class="max-w-[1350px] mx-auto">
+
+      <div class="flex justify-between items-end mb-7 gap-4 card">
+        <div>
+          <p class="cinzel gold text-xs tracking-[.2em] mb-2">GALLERY</p>
+          <h2 class="text-3xl md:text-4xl">Moments of Karna</h2>
+        </div>
+
+        <a href="#footer" class="gold text-xs whitespace-nowrap hover:text-amber-200">
+          Discover More <i class="ri-arrow-right-line ml-1"></i>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
+
+        <a href="#legend" class="gallery-card relative h-48 md:h-56 group card2">
+          <img class="gallery-image w-full h-full object-cover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmvRxtYJcJBfdvEYQfPLyAnp2gPD450-GcWkSUdjXDBQ&s=10" alt="Golden sunset landscape">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+          <p class="absolute bottom-4 left-4 text-xs gold">The Legend</p>
+        </a>
+
+        <a href="#journey" class="gallery-card relative h-48 md:h-56 group card2">
+          <img class="gallery-image w-full h-full object-cover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNA4bHkJEIRWwtVQqCyuYRgVUJp09aAB2NnFODnj_XhQ&s=10" alt="Ancient fantasy atmosphere">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+          <p class="absolute bottom-4 left-4 text-xs gold">The Warrior</p>
+        </a>
+
+        <a href="#values" class="gallery-card relative h-48 md:h-56 group card2">
+          <img class="gallery-image w-full h-full object-cover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJk4LOw0Kp0m45OX_JxrkjdTw_WqpumHDJH37W39pZgg&s=10" alt="Epic open landscape">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+          <p class="absolute bottom-4 left-4 text-xs gold">The Journey</p>
+        </a>
+
+        <a href="#quotes" class="gallery-card relative h-48 md:h-56 group card2">
+          <img class="gallery-image w-full h-full object-cover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2s8AFGnOJVcW8DmZjZiKVpIWOqgMvkzcyWIQp-oIFqQ&s=10" alt="Dramatic evening sky">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+          <p class="absolute bottom-4 left-4 text-xs gold">Divine Destiny</p>
+        </a>
+
+        <a href="#home" class="gallery-card relative h-48 md:h-56 group card2">
+          <img class="gallery-image w-full h-full object-cover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQey_gGhWSvdvx-ApaseghIt3dZZmn0MOSbxRO0EZ5yfA&s=10" alt="Sunrise over mountains">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+          <p class="absolute bottom-4 left-4 text-xs gold">Eternal Legacy</p>
+        </a>
+
+      </div>
+    </div>
+  </section>
+  <footer id="footer" class="border-t border-white/10 bg-[#070a0c] px-6 md:px-12">
+
+    <div class="max-w-[1350px] mx-auto py-8">
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-7 items-center">
+
+        <a href="#home" class="flex items-center gap-3">
+          <img src="https://upload.wikimedia.org/wikipedia/en/e/eb/Suryaputra_Karn.png?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original" class="w-28 rounded-[100%]">
+        </a>
+
+        <div class="text-center">
+          <p class="italic text-sm leading-6">
+            "Not a villain, not a hero...<br>
+            Just a man who never gave up."
+          </p>
+          <div class="w-10 h-px bg-amber-600 mx-auto mt-4"></div>
+        </div>
+
+        <div class="flex items-center justify-center md:justify-end gap-5 text-xl">
+          <a href="#footer" aria-label="Instagram" class="hover:text-amber-400"><i class="ri-instagram-line"></i></a>
+          <a href="#footer" aria-label="YouTube" class="hover:text-amber-400"><i class="ri-youtube-line"></i></a>
+          <a href="#footer" aria-label="X" class="hover:text-amber-400"><i class="ri-twitter-x-line"></i></a>
+          <a href="#footer" aria-label="Discord" class="hover:text-amber-400"><i class="ri-discord-line"></i></a>
+        </div>
+
+      </div>
+
+      <div class="section-line my-7"></div>
+
+      <div class="flex flex-col md:flex-row justify-between gap-4 text-[10px] text-stone-500">
+        <p>© 2026 Karna. A story that lives forever.</p>
+
+        <div class="flex gap-4">
+          <a href="#legend" class="hover:text-amber-400">Surya Putra</a>
+          <span>/</span>
+          <a href="#journey" class="hover:text-amber-400">Warrior</a>
+          <span>/</span>
+          <a href="#values" class="hover:text-amber-400">Legend</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
